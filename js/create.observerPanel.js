@@ -1,8 +1,7 @@
 function create_observerPanel(node, func) {
+
     var observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            func(node.id);
-        });
+        func(node);
     });
     var config = {
         attributes: false,
